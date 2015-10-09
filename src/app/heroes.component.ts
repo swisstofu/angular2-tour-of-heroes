@@ -10,22 +10,12 @@ import {Routes} from './route.config';
   directives: [CORE_DIRECTIVES, FORM_DIRECTIVES],
   styleUrls: ['app/heroes.component.css']
 })
-export class HeroesComponent implements OnInit {
+export class HeroesComponent {
   public heroes: Hero[];
   public selectedHero: Hero;
 
-  constructor(private _heroService: HeroService, private _router: Router) { }
-
-  onInit() { this.heroes = this.getHeroes(); }
-
-  getHeroes() {
-    this.selectedHero = undefined;
-    this.heroes = [];
-
-    this._heroService.getHeroes()
-      .then(heroes => this.heroes = heroes);
-
-    return this.heroes;
+  constructor(private _heroService: HeroService, private _router: Router) {
+    _heroService.getHeroes().then((resp) => this.heroes = resp);
   }
 
   getSelectedClass(hero: Hero) {

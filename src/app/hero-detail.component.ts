@@ -15,7 +15,7 @@ export class HeroDetailComponent {
   constructor(private _heroService: HeroService,
     private _routeParams: RouteParams, private _router: Router) {
 
-    let id = +_routeParams.get('id');
+    let id = parseInt(_routeParams.get('id'), 10);
     this._heroService.getHero(id).then(hero => this.hero = hero);
   }
 

@@ -2,7 +2,7 @@ import {HeroesComponent} from './heroes.component';
 import {HeroDetailComponent} from './hero-detail.component';
 import {DashboardComponent} from './dashboard.component';
 
-export var Routes = {
+export const Routes = {
 	dashboard: {
 		path: '/',
     as: 'Dashboard',
@@ -26,4 +26,4 @@ export var Routes = {
 	}
 };
 
-export const APP_ROUTES = [this.Routes.dashboard, this.Routes.detail, this.Routes.heroes];
+export const APP_ROUTES = [Routes.dashboard, Routes.detail, Routes.heroes];
