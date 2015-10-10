@@ -1,5 +1,5 @@
 import {Component, CORE_DIRECTIVES, FORM_DIRECTIVES, View} from 'angular2/angular2';
-import {Router} from 'angular2/router';
+import {Router, ROUTER_DIRECTIVES} from 'angular2/router';
 import {Hero} from './hero';
 import {HeroService} from './hero.service';
 import {Routes} from './route.config';
@@ -8,7 +8,7 @@ import {Routes} from './route.config';
 @View({
 	templateUrl: 'app/dashboard.component.html',
 	styleUrls: ['app/dashboard.component.css'],
-  directives: [CORE_DIRECTIVES, FORM_DIRECTIVES]
+  directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, ROUTER_DIRECTIVES]
 })
 export class DashboardComponent {
 	public heroes: Hero[];

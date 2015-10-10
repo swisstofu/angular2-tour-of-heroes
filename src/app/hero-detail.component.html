@@ -7,5 +7,5 @@
 		<label>name: </label>
 		<input [(ng-model)]="hero.name" placeholder="name">
 	</div>
-	<button (click)="gotoHeroes()">Back</button>
+	<button [router-link]="routes.heroes.link">Back</button>
 </div>
