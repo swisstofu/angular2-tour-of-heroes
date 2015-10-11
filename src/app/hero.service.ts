@@ -5,7 +5,12 @@ export class HeroService {
   getHeroes(): Promise<Hero[]> { return Promise.resolve(HEROES); }
 
   getHero(id: number): Promise<Hero> {
-    return Promise.resolve(HEROES)
-        .then((heroes) => heroes.filter((h) => h.id === id)[0]);
+    return Promise.resolve(HEROES).then((heroes) => {
+      for (var hero of heroes) {
+        if (hero.id === id) {
+          return hero;
+        }
+      }
+    });
   }
 }

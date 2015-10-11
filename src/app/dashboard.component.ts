@@ -16,7 +16,7 @@ import {Routes} from './route.config';
   directives : [ CORE_DIRECTIVES, FORM_DIRECTIVES, ROUTER_DIRECTIVES ]
 })
 export class DashboardComponent {
-  public heroes: Hero[];
+  heroes: Hero[];
 
   constructor(private _heroService: HeroService, private _router: Router) {
     _heroService.getHeroes().then((resp) => this.heroes = resp);

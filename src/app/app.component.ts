@@ -10,6 +10,6 @@ import {Routes, APP_ROUTES} from './route.config';
 })
 @RouteConfig(APP_ROUTES)
 export class AppComponent {
-  public title = 'Tour of Heroes';
-  public routes = Routes;
+  title = 'Tour of Heroes';
+  routes = Routes;
 }

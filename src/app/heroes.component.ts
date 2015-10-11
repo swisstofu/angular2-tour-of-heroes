@@ -17,8 +17,8 @@ import {Routes} from './route.config';
   styleUrls : ['app/heroes.component.css']
 })
 export class HeroesComponent {
-  public heroes: Hero[];
-  public selectedHero: Hero;
+  heroes: Hero[];
+  selectedHero: Hero;
 
   constructor(private _heroService: HeroService, private _router: Router) {
     _heroService.getHeroes().then((resp) => this.heroes = resp);
