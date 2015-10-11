@@ -4,10 +4,6 @@
 	<div *ng-for="#hero of heroes | slice:0:8" class="col-1-4">
 		<div class="module hero">
 			<div>{{hero.name}}</div>
-			<status
-					[active]="!hero.retired"
-					(change)="onChange($event, hero)">
-			</status>
 		</div>
 	</div>
 </div>
