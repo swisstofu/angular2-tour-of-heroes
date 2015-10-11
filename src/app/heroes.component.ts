@@ -26,7 +26,7 @@ export class HeroesComponent {
 
   gotoDetail() {
     this._router
-        .navigate([ `/${Routes.detail.as}`, {id : this.selectedHero.id} ]);
+        .navigate(Routes.detail.link.concat([{id : this.selectedHero.id}]));
   }
 
   onSelect(hero: Hero) { this.selectedHero = hero; }
