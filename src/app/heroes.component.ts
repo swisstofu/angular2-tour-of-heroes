@@ -24,10 +24,6 @@ export class HeroesComponent {
     _heroService.getHeroes().then((resp) => this.heroes = resp);
   }
 
-  getSelectedClass(hero: Hero) {
-    return {'selected' : hero === this.selectedHero};
-  }
-
   gotoDetail() {
     this._router
         .navigate([ `/${Routes.detail.as}`, {id : this.selectedHero.id} ]);
