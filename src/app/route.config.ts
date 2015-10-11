@@ -1,6 +1,7 @@
 import {HeroesComponent} from './heroes.component';
 import {HeroDetailComponent} from './hero-detail.component';
 import {DashboardComponent} from './dashboard.component';
+import {RouteDefinition} from 'angular2/router';
 
 export const Routes = {
   dashboard : {
@@ -23,4 +24,4 @@ export const Routes = {
   }
 };
 
-export const APP_ROUTES = Object.keys(Routes).map((name) => Routes[name]);
+export const APP_ROUTES: RouteDefinition[] = Object.keys(Routes).map((name) => Routes[name]);

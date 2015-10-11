@@ -23,6 +23,6 @@ export class DashboardComponent {
   }
 
   gotoDetail(hero: Hero) {
-    this._router.navigate([ `/${Routes.detail.as}`, {id : hero.id} ]);
+    this._router.navigate([ '/' + Routes.detail.as, {id : hero.id} ]);
   }
 }
