@@ -6,7 +6,7 @@ import {
 } from 'angular2/angular2';
 import {Router, ROUTER_DIRECTIVES} from 'angular2/router';
 import {HeroService} from './hero.service';
-import {Hero} from './hero';
+import {Hero} from './hero.model';
 import {Routes} from './route.config';
 
 @Component({selector : 'my-heroes'})

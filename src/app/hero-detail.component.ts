@@ -1,6 +1,6 @@
 import {Component, View, FORM_DIRECTIVES} from 'angular2/angular2';
 import {RouteParams, Router, ROUTER_DIRECTIVES} from 'angular2/router';
-import {Hero} from './hero';
+import {Hero} from './hero.model';
 import {HeroService} from './hero.service';
 import {Routes} from './route.config';
 

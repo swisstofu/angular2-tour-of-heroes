@@ -1,5 +1,5 @@
 import {HEROES} from './mock-heroes';
-import {Hero} from "./hero";
+import {Hero} from "./hero.model";
 
 export class HeroService {
   getHeroes(): Promise<Hero[]> { return Promise.resolve(HEROES); }
