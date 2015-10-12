@@ -1,11 +1,11 @@
-import {Component, View, FORM_DIRECTIVES} from 'angular2/angular2';
+import {Component, FORM_DIRECTIVES} from 'angular2/angular2';
 import {RouteParams, Router, ROUTER_DIRECTIVES} from 'angular2/router';
 import {Hero} from './hero.model';
 import {HeroService} from './hero.service';
 import {Routes} from './route.config';
 
-@Component({selector : 'my-hero-detail'})
-@View({
+@Component({
+  selector : 'my-hero-detail',
   templateUrl : 'app/hero-detail.component.html',
   directives : [ FORM_DIRECTIVES, ROUTER_DIRECTIVES ]
 })

@@ -2,8 +2,8 @@ import {View, Component, CORE_DIRECTIVES} from 'angular2/angular2';
 import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 import {Routes, APP_ROUTES} from './route.config';
 
-@Component({selector : 'my-app'})
-@View({
+@Component({
+  selector : 'my-app',
   directives : [ CORE_DIRECTIVES, ROUTER_DIRECTIVES ],
   templateUrl : 'app/app.component.html',
   styleUrls : ['app/app.component.css']

@@ -1,9 +1,7 @@
-import {Component, View, EventEmitter, Output, Input, CORE_DIRECTIVES} from 'angular2/angular2';
+import {Component, EventEmitter, Output, Input, CORE_DIRECTIVES} from 'angular2/angular2';
 
 @Component({
-  selector: 'ngstatus'
-})
-@View({
+  selector: 'ngstatus',
   templateUrl: 'app/ngstatus.component.html',
   directives: [CORE_DIRECTIVES],
   styleUrls: ['app/ngstatus.component.css']

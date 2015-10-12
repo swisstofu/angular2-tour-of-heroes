@@ -1,20 +1,19 @@
 import {
   Component,
   CORE_DIRECTIVES,
-  FORM_DIRECTIVES,
-  View
+  FORM_DIRECTIVES
 } from 'angular2/angular2';
-import {Router, ROUTER_DIRECTIVES} from 'angular2/router';
+import {Router} from 'angular2/router';
 import {Hero} from './hero.model';
 import {HeroService} from './hero.service';
 import {Routes} from './route.config';
 import {NgStateComponent, NgChangeEvent} from "./ngstatus.component";
 
-@Component({selector : 'my-dashboard'})
-@View({
+@Component({
+  selector : 'my-dashboard',
   templateUrl : 'app/dashboard.component.html',
   styleUrls : ['app/dashboard.component.css'],
-  directives : [ CORE_DIRECTIVES, FORM_DIRECTIVES, ROUTER_DIRECTIVES, NgStateComponent ]
+  directives : [ CORE_DIRECTIVES, FORM_DIRECTIVES, NgStateComponent ]
 })
 export class DashboardComponent {
   heroes: Hero[];

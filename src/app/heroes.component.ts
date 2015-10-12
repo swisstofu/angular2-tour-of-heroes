@@ -1,6 +1,5 @@
 import {
   Component,
-  View,
   CORE_DIRECTIVES,
   FORM_DIRECTIVES
 } from 'angular2/angular2';
@@ -9,8 +8,8 @@ import {HeroService} from './hero.service';
 import {Hero} from './hero.model';
 import {Routes} from './route.config';
 
-@Component({selector : 'my-heroes'})
-@View({
+@Component({
+  selector : 'my-heroes',
   templateUrl : 'app/heroes.component.html',
   directives : [ CORE_DIRECTIVES, FORM_DIRECTIVES, ROUTER_DIRECTIVES ],
   styleUrls : ['app/heroes.component.css']
