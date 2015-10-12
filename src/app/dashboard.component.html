@@ -1,8 +1,14 @@
 <h3>Top Heroes</h3>
+
 <div class="grid grid-pad">
-	<div *ng-for="#hero of heroes | slice:0:8" class="col-1-4" (click)="gotoDetail(hero)">
+	<div *ng-for="#hero of heroes | slice:0:8" class="col-1-4">
 		<div class="module hero">
 			<h4>{{hero.name}}</h4>
+			<ngstatus [active]="!hero.retired" (ngchange)="onChange($event, hero)"></ngstatus>
 		</div>
 	</div>
 </div>
+
+<h3 *ng-if="ngHeroes.length > 0">
+	Dispatch {{ngHeroesString}} on a mission!
+</h3>
