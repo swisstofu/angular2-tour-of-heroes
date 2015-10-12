@@ -2,11 +2,11 @@ import {Component, EventEmitter, Output, Input, CORE_DIRECTIVES} from 'angular2/
 
 @Component({
   selector: 'ngstatus',
-  templateUrl: 'app/ngstatus.component.html',
+  templateUrl: 'app/status.component.html',
   directives: [CORE_DIRECTIVES],
-  styleUrls: ['app/ngstatus.component.css']
+  styleUrls: ['app/status.component.css']
 })
-export class NgStateComponent {
+export class StatusComponent {
   isAngular: boolean;
   @Input()
       active: boolean;
@@ -25,6 +25,6 @@ export class NgStateComponent {
   }
 }
 
-export interface NgChangeEvent {
+export interface StatusChangeEvent {
   state: boolean;
 }

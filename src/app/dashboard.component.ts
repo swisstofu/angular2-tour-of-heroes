@@ -7,13 +7,13 @@ import {Router} from 'angular2/router';
 import {Hero} from './hero.model';
 import {HeroService} from './hero.service';
 import {Routes} from './route.config';
-import {NgStateComponent, NgChangeEvent} from "./ngstatus.component";
+import {StatusComponent, StatusChangeEvent} from "./status.component";
 
 @Component({
   selector : 'my-dashboard',
   templateUrl : 'app/dashboard.component.html',
   styleUrls : ['app/dashboard.component.css'],
-  directives : [ CORE_DIRECTIVES, FORM_DIRECTIVES, NgStateComponent ]
+  directives : [ CORE_DIRECTIVES, FORM_DIRECTIVES, StatusComponent ]
 })
 export class DashboardComponent {
   heroes: Hero[];
@@ -23,7 +23,7 @@ export class DashboardComponent {
     _heroService.getHeroes().then((resp) => this.heroes = resp);
   }
 
-  onChange(event: NgChangeEvent, hero: Hero) {
+  onChange(event: StatusChangeEvent, hero: Hero) {
     if (event.state) {
       this.ngHeroes.push(hero);
     } else {
