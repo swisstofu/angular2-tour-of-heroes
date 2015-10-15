@@ -1,7 +1,6 @@
 import {
   Component,
-  CORE_DIRECTIVES,
-  FORM_DIRECTIVES
+  CORE_DIRECTIVES
 } from 'angular2/angular2';
 import {Router} from 'angular2/router';
 import {Hero} from './hero.model';
@@ -13,7 +12,7 @@ import {StatusComponent, StatusChangeEvent} from "./status.component";
   selector : 'my-dashboard',
   templateUrl : 'app/dashboard.component.html',
   styleUrls : ['app/dashboard.component.css'],
-  directives : [ CORE_DIRECTIVES, FORM_DIRECTIVES, StatusComponent ]
+  directives : [ CORE_DIRECTIVES, StatusComponent ]
 })
 export class DashboardComponent {
   heroes: Hero[];
