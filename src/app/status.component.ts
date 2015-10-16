@@ -1,4 +1,10 @@
-import {Component, EventEmitter, Output, Input, CORE_DIRECTIVES} from 'angular2/angular2';
+import {
+  Component,
+  EventEmitter,
+  Output,
+  Input,
+  CORE_DIRECTIVES
+} from 'angular2/angular2';
 
 @Component({
   selector: 'status',
@@ -8,10 +14,8 @@ import {Component, EventEmitter, Output, Input, CORE_DIRECTIVES} from 'angular2/
 })
 export class StatusComponent {
   isAngular: boolean;
-  @Input()
-      active: boolean;
-  @Output()
-      ngchange: EventEmitter;
+  @Input() active: boolean;
+  @Output() ngchange: EventEmitter;
   constructor() {
     this.ngchange = new EventEmitter();
     this.active = true;

@@ -1,7 +1,4 @@
-import {
-  Component,
-  CORE_DIRECTIVES
-} from 'angular2/angular2';
+import {Component, CORE_DIRECTIVES} from 'angular2/angular2';
 import {Router} from 'angular2/router';
 import {Hero} from './hero.model';
 import {HeroService} from './hero.service';
@@ -9,10 +6,10 @@ import {Routes} from './route.config';
 import {StatusComponent, StatusChangeEvent} from "./status.component";
 
 @Component({
-  selector : 'my-dashboard',
-  templateUrl : 'app/dashboard.component.html',
-  styleUrls : ['app/dashboard.component.css'],
-  directives : [ CORE_DIRECTIVES, StatusComponent ]
+  selector: 'my-dashboard',
+  templateUrl: 'app/dashboard.component.html',
+  styleUrls: ['app/dashboard.component.css'],
+  directives: [CORE_DIRECTIVES, StatusComponent]
 })
 export class DashboardComponent {
   heroes: Hero[];
@@ -30,7 +27,5 @@ export class DashboardComponent {
     }
   }
 
-  get ngHeroesString() {
-    return this.ngHeroes.map((h) => h.name).join(', ');
-  }
+  get ngHeroesString() { return this.ngHeroes.map((h) => h.name).join(', '); }
 }
