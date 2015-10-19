@@ -9,6 +9,8 @@
   </ul>
   <div *ng-if="selectedHero">
     <h2>{{selectedHero.name | uppercase}} is my hero</h2>
-    <button (click)="gotoDetail()">View Details</button>
+    <button
+        class="md-button md-default-theme md-raised"
+        (click)="gotoDetail()">View Details</button>
   </div>
 </div>

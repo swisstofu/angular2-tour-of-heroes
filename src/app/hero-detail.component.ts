@@ -7,6 +7,7 @@ import {Routes} from './route.config';
 @Component({
   selector: 'my-hero-detail',
   templateUrl: 'app/hero-detail.component.html',
+  styleUrls: ['app/hero-detail.component.css'],
   directives: [FORM_DIRECTIVES, ROUTER_DIRECTIVES]
 })
 export class HeroDetailComponent {

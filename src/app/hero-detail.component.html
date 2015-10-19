@@ -5,7 +5,9 @@
 	</div>
 	<div>
 		<label>name: </label>
-		<input [(ng-model)]="hero.name" placeholder="name">
+		<input class="md-input"
+				[(ng-model)]="hero.name" placeholder="name">
 	</div>
-	<button [router-link]="routes.heroes.link">Back</button>
+	<button class="md-button md-default-theme md-raised"
+					[router-link]="routes.heroes.link">Back</button>
 </div>
