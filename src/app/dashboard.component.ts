@@ -1,5 +1,4 @@
 import {Component, CORE_DIRECTIVES} from 'angular2/angular2';
-import {Router} from 'angular2/router';
 import {Hero} from './hero.model';
 import {HeroService} from './hero.service';
 import {Routes} from './route.config';
@@ -15,12 +14,12 @@ export class DashboardComponent {
   heroes: Hero[];
   ngHeroes: Hero[] = [];
 
-  constructor(private _heroService: HeroService, private _router: Router) {
+  constructor(private _heroService: HeroService) {
     _heroService.getHeroes().then((resp) => this.heroes = resp);
   }
 
   onChange(event: StatusChangeEvent, hero: Hero) {
-    if (event.state) {
+    if (event.status) {
       this.ngHeroes.push(hero);
     } else {
       this.ngHeroes.splice(this.ngHeroes.indexOf(hero), 1);

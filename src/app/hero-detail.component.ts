@@ -1,5 +1,5 @@
 import {Component, FORM_DIRECTIVES} from 'angular2/angular2';
-import {RouteParams, Router, ROUTER_DIRECTIVES} from 'angular2/router';
+import {RouteParams, ROUTER_DIRECTIVES} from 'angular2/router';
 import {Hero} from './hero.model';
 import {HeroService} from './hero.service';
 import {Routes} from './route.config';
@@ -14,10 +14,8 @@ export class HeroDetailComponent {
   routes = Routes;
 
   constructor(private _heroService: HeroService,
-              private _routeParams: RouteParams, private _router: Router) {
+              private _routeParams: RouteParams) {
     let id = parseInt(_routeParams.get('id'), 10);
     this._heroService.getHero(id).then(hero => this.hero = hero);
   }
-
-  gotoHeroes() { this._router.navigate([`/${Routes.heroes.as}`]); }
 }

@@ -1,4 +1,4 @@
-import {Component, CORE_DIRECTIVES, provide} from 'angular2/angular2';
+import {Component, provide} from 'angular2/angular2';
 import {
   RouteConfig,
   ROUTER_DIRECTIVES,
@@ -11,7 +11,7 @@ import {HeroService} from "./hero.service";
 
 @Component({
   selector: 'my-app',
-  directives: [CORE_DIRECTIVES, ROUTER_DIRECTIVES],
+  directives: [ROUTER_DIRECTIVES],
   templateUrl: 'app/app.component.html',
   styleUrls: ['app/app.component.css'],
   providers: [

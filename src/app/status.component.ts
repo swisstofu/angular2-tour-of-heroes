@@ -13,22 +13,22 @@ import {
   styleUrls: ['app/status.component.css']
 })
 export class StatusComponent {
-  isAngular: boolean;
+  isSelected: boolean;
   @Input() active: boolean;
-  @Output() ngchange: EventEmitter;
+  @Output() change: EventEmitter;
   constructor() {
-    this.ngchange = new EventEmitter();
+    this.change = new EventEmitter();
     this.active = true;
-    this.isAngular = false;
+    this.isSelected = false;
   }
 
   onClick() {
     if (!this.active) return;
-    this.isAngular = !this.isAngular;
-    this.ngchange.next({state: this.isAngular});
+    this.isSelected = !this.isSelected;
+    this.change.next({status: this.isSelected});
   }
 }
 
 export interface StatusChangeEvent {
-  state: boolean;
+  status: boolean;
 }
